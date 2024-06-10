@@ -23,8 +23,10 @@ To run the supervised multi-view script, use:
 ```bash
 python run_supervised_multiview.py
 ```
-
-
+To run the human action recognition tasks, use:
+```bash
+python run_HAR.py
+```
 ## Citation
 
 If you find our work useful, please cite the following articles:
