@@ -52,5 +52,3 @@ If you find our work useful, please cite the following articles:
 }
 ```
 ```
-
-Feel free to further modify or expand it as needed.
