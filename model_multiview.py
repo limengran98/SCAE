@@ -85,7 +85,7 @@ class SCAEMultiView():
         train_view1 = x1_train[flag]
         train_view2 = x2_train[flag]
         train_view3 = x3_train[flag]
-        torch.save(flag, 'flag.pt')
+        # torch.save(flag, 'flag.pt')
         for k in range(epochs_total):
             X1, X2, X3 = shuffle(train_view1, train_view2, train_view3)
             all0, all1, all2, all_icl, map1, map2 = 0, 0, 0, 0, 0, 0
@@ -310,7 +310,7 @@ class SCAEMultiView():
                     self.b2c.train(), self.c2b.train()
                     self.a2c.train(), self.c2a.train()
 
-                torch.save(latent_fusion, 'latent_fusion.pt')
+                # torch.save(latent_fusion, 'latent_fusion.pt')
 
 
             # Concatenate the outputs for each variable
@@ -321,13 +321,13 @@ class SCAEMultiView():
             x_hat2_final = torch.cat(x_hat2_batches, dim=0)
             x_hat3_final = torch.cat(x_hat3_batches, dim=0)
 
-            # Save the concatenated tensors
-            torch.save(z_half1_final, 'z_half1_final.pt')
-            torch.save(z_half2_final, 'z_half2_final.pt')
-            torch.save(z_half3_final, 'z_half3_final.pt')
-            torch.save(x_hat1_final, 'x_hat1_final.pt')
-            torch.save(x_hat2_final, 'x_hat2_final.pt')
-            torch.save(x_hat3_final, 'x_hat3_final.pt')
+            # # Save the concatenated tensors
+            # torch.save(z_half1_final, 'z_half1_final.pt')
+            # torch.save(z_half2_final, 'z_half2_final.pt')
+            # torch.save(z_half3_final, 'z_half3_final.pt')
+            # torch.save(x_hat1_final, 'x_hat1_final.pt')
+            # torch.save(x_hat2_final, 'x_hat2_final.pt')
+            # torch.save(x_hat3_final, 'x_hat3_final.pt')
 
         return max(accumulated_metrics['acc']), max(accumulated_metrics['nmi']), max(accumulated_metrics['ARI'])
 
