@@ -73,14 +73,14 @@ def main():
 
         # Get Mask
         mask = get_mask(3, x1_train_raw.shape[0], config['missing_rate'])
-        torch.save(mask , 'mask.pt')
+        # torch.save(mask , 'mask.pt')
         x1_train = x1_train_raw * mask[:, 0][:, np.newaxis]
         x2_train = x2_train_raw * mask[:, 1][:, np.newaxis]
         x3_train = x3_train_raw * mask[:, 2][:, np.newaxis]
 
-        torch.save(x1_train, 'x1_train.pt')
-        torch.save(x2_train, 'x2_train.pt')
-        torch.save(x3_train, 'x3_train.pt')
+        # torch.save(x1_train, 'x1_train.pt')
+        # torch.save(x2_train, 'x2_train.pt')
+        # torch.save(x3_train, 'x3_train.pt')
 
         mask_num = []
         mask_num.append(np.arange(x1_train_raw.shape[0])[~np.array(mask[:, 0], dtype=bool)] + 1)
